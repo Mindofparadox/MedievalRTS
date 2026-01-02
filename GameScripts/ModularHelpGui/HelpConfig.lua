@@ -58,13 +58,15 @@ HelpConfig.CONTROLS_DATA = {
 		Section = "- ACTIONS -",
 		Entries = {
 			{Key = "F Key", Action = "Mark Tree for Chopping"},
+			{Key = "G Key", Action = "Mark Stone for Mining"},
 			{Key = "Q / E", Action = "Rotate Building Placement"},
+			{Key = "Esc / RMB (placing)", Action = "Cancel Building Placement"},
 		}
 	},
 	{
 		Section = "- GARRISON -",
 		Entries = {
-			{Key = "E Key (on Tower)", Action = "Garrison Archers"},
+			{Key = "E Key (on Tower)", Action = "Garrison Archers (RMB Move to Ungarrison)"},
 		}
 	}
 }
