@@ -390,6 +390,14 @@ return function(S)
 			-----------------------------------------------------------------
 			local stats = UNIT_TYPES[uType]
 			if stats and stats.IsCombat and not UNIT_ACTION_TRACKS[unit] then
+				-- Respect explicit move commands: if the unit is currently executing a move
+				-- order, suppress combat targeting so the unit continues to its destination.
+				if QUEUE_RUNNING[unit] then
+					unit:SetAttribute("CombatTarget", nil)
+					unit:SetAttribute("IsAttacking", false)
+					continue
+				end
+
 				local hum = unit:FindFirstChildOfClass("Humanoid")
 				local root = ensurePrimaryPart(unit)
 
