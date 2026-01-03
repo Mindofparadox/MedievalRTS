@@ -11,6 +11,7 @@ local S = require(modules:WaitForChild("Shared"))
 -- Helpers must load before modules that call utility functions exported on S.
 require(modules:WaitForChild("UI"))
 require(modules:WaitForChild("Helpers"))
+require(modules:WaitForChild("FogOfWar"))
 require(modules:WaitForChild("Selection"))
 require(modules:WaitForChild("HealthBars"))
 require(modules:WaitForChild("PathVisuals"))
